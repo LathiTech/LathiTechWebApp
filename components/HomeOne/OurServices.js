@@ -121,7 +121,7 @@ const OurServices = () => {
               <div className="single-services-box">
                 <div className="icon">
                 <img
-                    src="/CustomImages/app.png"
+                    src="/CustomImages/App.png"
                     className="white-logo"
                     alt="Ux/Ui Logo"
                     style={{"width": "25px"}}
