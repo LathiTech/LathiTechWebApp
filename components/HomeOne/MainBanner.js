@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-
+import FsLightbox from "fslightbox-react";
 const MainBanner = () => {
+  const [toggler, setToggler] = useState(false);
   return (
     <>
+       <FsLightbox
+        toggler={toggler}
+        sources={["https://www.youtube.com/watch?v=bk7McNUjWgw"]}
+      />
+
       <div className="main-banner-two">
         <div className="d-table">
           <div className="d-table-cell">
@@ -29,7 +35,7 @@ const MainBanner = () => {
                       </p>
                     </div>
 
-                    <div
+                    {/* <div
                       className="banner-btn"
                       data-aos="fade-up"
                       data-aos-delay="300"
@@ -48,6 +54,28 @@ const MainBanner = () => {
                           <span></span>
                         </a>
                       </Link>
+                    </div> */}
+
+                    <div className="banner-btn">
+                      <Link href="/about-us">
+                        <a className="default-btn-one">
+                          About Us <span></span>
+                        </a>
+                      </Link>
+                      <Link href="/about-us">
+                        <a className="default-btn-one" href="/contact">
+                          Contact Us
+                          <span></span>
+                        </a>
+                      </Link>
+
+                      <div
+                        onClick={() => setToggler(!toggler)}
+                        className="video-btn popup-youtube"
+                      >
+                        <i className="fa fa-play"></i>
+                        Watch Video
+                      </div>
                     </div>
                   </div>
                 </div>
