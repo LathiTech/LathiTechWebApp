@@ -52,7 +52,7 @@ const MainBanner = () => {
                         src="CustomImages/playButton .png"
                         alt="image"
                         className="main_banner"
-                        style={{ marginLeft: '20px', width: '200px', height: 'auto', cursor: 'pointer' }}
+                        style={{ marginLeft: '20px', width: '200px', height: 'auto', cursor: 'pointer',display:"block" }}
                         onClick={handleImageClick}
                       />
                     </div>
